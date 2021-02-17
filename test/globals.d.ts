@@ -1,6 +1,6 @@
-  declare namespace NodeJS {
-    interface Global {
-      //para sobrescrever uma variável global, o import deve ser inline, caso contrário, ficaria apenas local
-      testRequest: import('supertest').SuperTest<import('supertest').Test>;
-    }
+declare namespace NodeJS {
+  interface Global {
+    //https://stackoverflow.com/a/51114250
+    testRequest: import('supertest').SuperTest<import('supertest').Test>;
   }
+}
